@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import {DoublePipe } from './double';
 @Component({ 
   selector: 'app-phone-list',
   templateUrl: './phone-list.component.html',
@@ -8,7 +7,7 @@ import {DoublePipe } from './double';
 export class PhoneListComponent implements OnInit {
 
   phones;
-  txt : number;
+  txt : String;
   constructor() { 
     console.log(this.txt);
     

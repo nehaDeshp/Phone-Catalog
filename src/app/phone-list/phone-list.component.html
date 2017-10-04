@@ -1,12 +1,11 @@
 <div class="container-fluid">
   <div class="row">
     <div class="col-md-2">
-      Search: <input type = "text" [(ngModel)]="txt">
-      {{txt | doubleIt }}
+      Search: <input type = "text" [(ngModel)]="txt"> {{txt}}
     </div>
     <div class="col-md-10">
       <ul>
-        <li *ngFor="let phone of phones">
+        <li *ngFor="let phone of phones | filterData : txt">
           <span>{{phone.name}}</span>
           <p>{{phone.snippet}}</p>
         </li>
