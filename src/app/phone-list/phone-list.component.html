@@ -3,11 +3,20 @@
     <div class="col-md-2">
       Search: <input type = "text" [(ngModel)]="txt"> {{txt}}
     </div>
-    <div class="col-md-10">
+    <div class="col-md-2">
+        Filter:
+        <select ng-model="selection"> 
+          <option> Asc
+          <option>Descending
+        </select>
+        {{selection}}
+    </div>
+    <div class="col-md-8">
       <ul>
-        <li *ngFor="let phone of phones | filterData : txt">
+        <li *ngFor="let phone of phones | filterData : txt | order : selection">
           <span>{{phone.name}}</span>
           <p>{{phone.snippet}}</p>
+          <p>{{phone.order}}</p>
         </li>
       </ul>
     </div>

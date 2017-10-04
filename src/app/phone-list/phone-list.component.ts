@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PhoneListComponent implements OnInit {
 
-  phones;
+  phones;selection;
   txt : String;
   constructor() { 
     console.log(this.txt);
@@ -14,13 +14,16 @@ export class PhoneListComponent implements OnInit {
     this.phones = [
       {
         name: 'Nexus S',
-        snippet: 'Fast just got faster with Nexus S.'
+        snippet: 'Fast just got faster with Nexus S.',
+        order:1
       }, {
         name: 'Motorola XOOM™ with Wi-Fi',
-        snippet: 'The Next, Next Generation tablet.'
+        snippet: 'The Next, Next Generation tablet.',
+        order:3
       }, {
         name: 'MOTOROLA XOOM™',
-        snippet: 'The Next, Next Generation tablet.'
+        snippet: 'The Next, Next Generation tablet.',
+        order:2
       }
     ];
   }
